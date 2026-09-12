@@ -19,7 +19,11 @@ export async function getCoordinates(city) {
     let response;
 
     try {
-        response = await fetch(`${url}?${params}`, { signal: controller.signal });
+        response = await fetch(`${url}?${params}`, {
+            method: 'GET',
+            headers: { 'Accept': 'application/json' },
+            signal: controller.signal,
+        });
     } catch (err) {
         if (err.name === 'AbortError') {
             throw new Error(`Превышен таймаут ${timeout} мс`);
@@ -82,7 +86,11 @@ export const getWeather = async (latitude, longitude, days) =>{
     let response;
 
     try {
-        response = await fetch(`${url}?${params}`, { signal: controller.signal });
+        response = await fetch(`${url}?${params}`, {
+            method: 'GET',
+            headers: { 'Accept': 'application/json' },
+            signal: controller.signal,
+        });
     } catch (err) {
         if (err.name === 'AbortError') {
             throw new Error(`Превышен таймаут ${timeout} мс`);
