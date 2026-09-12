@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import {parser} from './cli/parser.js'
 import {formatterData} from './format/formatter.js'
-import {setteld }from "./utils/setteld.js"
+import { processCity } from './services/processCity.js'
 
 
 try {
@@ -9,7 +9,7 @@ try {
     const { citysVal, daysVal, noCache } = parser(arg);
 
     const results = await Promise.allSettled(
-        citysVal.map((city) => setteld(city, daysVal, noCache))
+        citysVal.map((city) => processCity(city, daysVal, noCache))
     );
 
     let hasError = false;
