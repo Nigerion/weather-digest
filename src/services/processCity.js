@@ -6,6 +6,7 @@ export async function processCity(city, days, nocache,){
         const cache = await storage('get', city)
         if(cache){
             console.log(`Данные для города ${city} взяты из кэша`)
+            return cache; 
         }
     }
     const data= await getService(city,days)
