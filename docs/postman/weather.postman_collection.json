@@ -1,0 +1,438 @@
+{
+  "info": {
+    "_postman_id": "44ef28e1-d8e2-4146-853f-7d1e84d030b1",
+    "name": "weather",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32799765"
+  },
+  "item": [
+    {
+      "name": "cords1",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "cords1",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}?name=Москвус&count=1&language=ru&format=jsonфыввыффыв",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Москвус"
+                },
+                {
+                  "key": "count",
+                  "value": "1"
+                },
+                {
+                  "key": "language",
+                  "value": "ru"
+                },
+                {
+                  "key": "format",
+                  "value": "jsonфыввыффыв"
+                }
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 12 Sep 2026 19:07:27 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "136"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "deflate"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"reason\": \"Data corrupted at path 'format'. Cannot initialize ProtobufSerializationFormat from invalid String value jsonфыввыффыв.\",\n    \"error\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "cords2",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "cords2",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}?name=Москвус&count=1&language=ru&format=json",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Москвус"
+                },
+                {
+                  "key": "count",
+                  "value": "1"
+                },
+                {
+                  "key": "language",
+                  "value": "ru"
+                },
+                {
+                  "key": "format",
+                  "value": "json"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 12 Sep 2026 19:07:49 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "39"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Encoding-Time",
+              "value": "0.0034093856811523438 ms"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "deflate"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"generationtime_ms\": 1.2584925\n}"
+        }
+      ]
+    },
+    {
+      "name": "cords3",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "cords3",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}?name=Москва&count=1&language=ru&format=json",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Москва"
+                },
+                {
+                  "key": "count",
+                  "value": "1"
+                },
+                {
+                  "key": "language",
+                  "value": "ru"
+                },
+                {
+                  "key": "format",
+                  "value": "json"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 12 Sep 2026 19:08:23 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "237"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Encoding-Time",
+              "value": "0.007224082946777344 ms"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "deflate"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"results\": [\n        {\n            \"id\": 524901,\n            \"name\": \"Москва\",\n            \"latitude\": 55.75204,\n            \"longitude\": 37.61781,\n            \"elevation\": 155,\n            \"feature_code\": \"PPLC\",\n            \"country_code\": \"RU\",\n            \"admin1_id\": 524894,\n            \"timezone\": \"Europe/Moscow\",\n            \"population\": 10381222,\n            \"country_id\": 2017370,\n            \"country\": \"Россия\",\n            \"admin1\": \"Москва\"\n        }\n    ],\n    \"generationtime_ms\": 2.1694899\n}"
+        }
+      ]
+    },
+    {
+      "name": "weather2",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "weather2",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl2}}?latitude=55.75204&longitude=37.61781&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&forecast_days=1&timezone=auto",
+              "host": [
+                "{{baseUrl2}}"
+              ],
+              "query": [
+                {
+                  "key": "latitude",
+                  "value": "55.75204"
+                },
+                {
+                  "key": "longitude",
+                  "value": "37.61781"
+                },
+                {
+                  "key": "daily",
+                  "value": "temperature_2m_max,temperature_2m_min,precipitation_sum"
+                },
+                {
+                  "key": "forecast_days",
+                  "value": "1"
+                },
+                {
+                  "key": "timezone",
+                  "value": "auto",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 12 Sep 2026 19:12:16 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "deflate"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"latitude\": 55.75,\n    \"longitude\": 37.625,\n    \"generationtime_ms\": 0.0438690185546875,\n    \"utc_offset_seconds\": 10800,\n    \"timezone\": \"Europe/Moscow\",\n    \"timezone_abbreviation\": \"GMT+3\",\n    \"elevation\": 151,\n    \"daily_units\": {\n        \"time\": \"iso8601\",\n        \"temperature_2m_max\": \"°C\",\n        \"temperature_2m_min\": \"°C\",\n        \"precipitation_sum\": \"mm\"\n    },\n    \"daily\": {\n        \"time\": [\n            \"2026-09-12\"\n        ],\n        \"temperature_2m_max\": [\n            17.1\n        ],\n        \"temperature_2m_min\": [\n            9.6\n        ],\n        \"precipitation_sum\": [\n            0\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "weather1",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "weather1",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl2}}?latitude=55.75204&longitude=37.61781asd&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&forecast_days=1&timezone=auto",
+              "host": [
+                "{{baseUrl2}}"
+              ],
+              "query": [
+                {
+                  "key": "latitude",
+                  "value": "55.75204"
+                },
+                {
+                  "key": "longitude",
+                  "value": "37.61781asd"
+                },
+                {
+                  "key": "daily",
+                  "value": "temperature_2m_max,temperature_2m_min,precipitation_sum"
+                },
+                {
+                  "key": "forecast_days",
+                  "value": "1"
+                },
+                {
+                  "key": "timezone",
+                  "value": "auto"
+                }
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 12 Sep 2026 19:12:41 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "96"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "deflate"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"reason\": \"Invalid value: Cannot initialize Float from invalid String value 37.61781asd\",\n    \"error\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "weather3",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "weather3",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl2}}",
+              "host": [
+                "{{baseUrl2}}"
+              ],
+              "query": [
+                {
+                  "key": "latitude",
+                  "value": "55.75204",
+                  "disabled": true
+                },
+                {
+                  "key": "longitude",
+                  "value": "37.61781",
+                  "disabled": true
+                },
+                {
+                  "key": "daily",
+                  "value": "temperature_2m_max,temperature_2m_min,precipitation_sum",
+                  "disabled": true
+                },
+                {
+                  "key": "forecast_days",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "timezone",
+                  "value": "auto",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sat, 12 Sep 2026 19:13:20 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "8"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "deflate"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    }
+  ]
+}
