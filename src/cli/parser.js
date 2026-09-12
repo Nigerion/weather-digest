@@ -15,7 +15,7 @@ export const parser = (item) =>{
 
     const citysVal= citys?.split(',').map(i => i.trim()).filter(Boolean);
 
-    if(citysVal?.lenght < 1){
+    if(citysVal?.length < 1){
         throw new Error('После флага --city необходимо укаазать город, а не пустую строку. Например: Саратов')
     }
 
@@ -27,7 +27,7 @@ export const parser = (item) =>{
     
     const daysVal = Number(days)
 
-    if(daysVal > 7 || daysVal <= 0){
+    if(!Number.isInteger(daysVal) || daysVal > 7 || daysVal <= 0){
         throw new Error('Количество дней должно быть от 1 до 7')
     }
 
